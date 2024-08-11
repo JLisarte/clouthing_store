@@ -16,22 +16,18 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 @Table
-@Entity(name = "vendas")
-public class VendasEntity {
+@Entity(name = "produtos")
+public class ProdutosEntity {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
-	@Column(name = "cliente")
-	private String cliente;
+	@Column(name = "nome")
+	private String nome;
 		
-	private String funcionario;
+	private String descricao;
 		
-	private String produto_vendido;
-		
-	private int observacao;
-		
-	private String valor_total;
+	private double preco;
 	
 }
